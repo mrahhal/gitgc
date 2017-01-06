@@ -49,11 +49,11 @@ func main() {
 	userDir := filepath.Join(base, user)
 	repoDir := filepath.Join(userDir, repo)
 	repoURL := "https://github.com/" + user + "/" + repo
-	fmt.Printf("Cloning repo 'github.com/%s/%s'...", user, repo)
+	fmt.Printf("Cloning repo 'github.com/%s/%s'...\n", user, repo)
 
 	err := os.MkdirAll(userDir, os.ModeDir)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error creating directory at '%s'\n", userDir)
+		fmt.Fprintf(os.Stderr, "Error creating directory at '%s'.\n", userDir)
 		fmt.Println(err)
 		return
 	}
