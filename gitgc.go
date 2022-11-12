@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"os"
 	"os/exec"
@@ -86,18 +85,22 @@ func ensureConfigFile(p string) string {
 		createConfigFile(p)
 	}
 
-	byteContent, err := ioutil.ReadFile(p)
+	byteContent, err := os.ReadFile(p)
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	content := string(byteContent)
 	return content
 }
 
 func createConfigFile(p string) {
 	f, err := os.Create(p)
-	defer f.Close()
-
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	defer f.Close()
 
 	fmt.Printf("Creating config file at '%s'.\n", p)
 	_, err = f.WriteString(getDefaultBase())
