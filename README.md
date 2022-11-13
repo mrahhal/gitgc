@@ -3,7 +3,7 @@ A small utility for easily cloning github repositories to a pre-configured direc
 
 ## Get
 ```
-go get github.com/mrahhal/gitgc
+go install github.com/mrahhal/gitgc@latest
 ```
 
 ## Usage
