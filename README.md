@@ -1,6 +1,6 @@
 # gitgc
 
-A small utility tool for easily cloning github repositories to a pre-configured directory.
+A small utility for easily cloning github repositories to a pre-configured directory.
 
 ## Install
 
