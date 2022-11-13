@@ -22,4 +22,4 @@ Example ".gitgc" file:
 C:\dev\git
 ```
 
-It will be automatically created on the first run, and will default to "[user home]/git".
+If it doesn't exist it will be automatically created on the first run, and will default to "{user home}/git".
