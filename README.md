@@ -1,8 +1,10 @@
 # gitgc
 
-A small utility for easily cloning github repositories to a pre-configured directory.
+A small utility tool for easily cloning github repositories to a pre-configured directory.
 
-## Get
+## Install
+
+You need to have [go](https://go.dev) installed first, and then:
 
 ```
 go install github.com/mrahhal/gitgc@latest
